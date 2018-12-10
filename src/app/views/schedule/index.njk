@@ -1,0 +1,30 @@
+{% extends '_layouts/default.njk' %}
+{% block body %}
+  <div class="content">
+  <strong>{{ user.name }}</strong>
+  <p>Veja abaixo a lista de agendamentos <br>
+    {% if user.provider === true %}
+      <b>que você tem para hoje</b>
+    {% endif %}
+  :</p>
+  <ul class="providers">
+    {% for appointment in appointments %}
+      <li class="provider">
+        <div>
+          <img src="/files/{{ appointment.user.avatar}}" >
+          <strong>
+            {{ appointment.user.name }}
+            <br>
+            {% if appointment.user.provider === true %}
+              {{ appointment.date  }}
+            {% endif %}
+            <br>
+            {{ appointment.hour }}
+          </strong>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="/" class="btn schedule">voltar</a>
+  </div>
+{% endblock  %}
