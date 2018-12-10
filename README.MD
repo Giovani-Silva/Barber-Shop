@@ -20,3 +20,5 @@ Aplicação MVC Node, Express, Nunjucks, PostGres
 - access vars in `database.js`
 - run sequelize migration `npx sequelize db:migrate`
 - run `yarn start` access in your browser `localhost:3000`
+
+> "Não espere para plantar, apenas tenha paciência para colher"
